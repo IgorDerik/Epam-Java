@@ -1,4 +1,4 @@
-package Lec4;
+package Strings;
 
 import java.util.Arrays;
 import java.util.Scanner;
