@@ -1,6 +1,6 @@
 package PizzaNew;
 
-public class PizzaOlives {
+public class PizzaOlives extends PizzaBase {
 
     private Pizza pizza;
 
