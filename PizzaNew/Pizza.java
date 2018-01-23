@@ -2,10 +2,8 @@ package PizzaNew;
 
 public class Pizza {
 
-    public Pizza() {
-    }
-
-    public String description(){
+    public String description() {
         return "Pizza with:";
     }
+
 }
