@@ -1,7 +1,7 @@
 package CoffeePoint;
 
-import CoffeePoint.payment.Payment;
-import CoffeePoint.payment.PaymentType;
+//import CoffeePoint.payment.Payment;
+//import CoffeePoint.payment.PaymentType;
 import CoffeePoint.products.Product;
 
 import java.util.LinkedList;

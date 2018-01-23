@@ -9,7 +9,7 @@ public class PizzaChicken extends PizzaBase {
     }
 
     public String description() {
-        return pizza.description() + " chicken";
+        return pizza.description() + " [chicken]";
     }
 
 }
