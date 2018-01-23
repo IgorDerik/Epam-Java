@@ -1,4 +1,4 @@
-package Lec5;
+package Refactoring;
 
 public abstract class Price {
 
