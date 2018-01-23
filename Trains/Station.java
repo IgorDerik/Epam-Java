@@ -1,4 +1,4 @@
-package Lec3;
+package Trains;
 
 import java.time.LocalTime;
 

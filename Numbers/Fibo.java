@@ -1,4 +1,4 @@
-package Lec1;
+package Numbers;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
