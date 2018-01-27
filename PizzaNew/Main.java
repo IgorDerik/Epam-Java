@@ -11,7 +11,7 @@ public class Main {
         pizza = new PizzaChicken(pizza);
         pizza = new PizzaOlives(pizza);
 
-        System.out.println("You're getting " + pizza.description());
+        System.out.println("Congrats! You're getting " + pizza.description());
 
     }
 
