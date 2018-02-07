@@ -1,4 +1,4 @@
-package PlayingOOP;
+package PlayingOOP.PolyAbstract;
 
 public class Asso extends Component {
 

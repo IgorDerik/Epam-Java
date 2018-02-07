@@ -1,6 +1,6 @@
-package PlayingOOP;
+package PlayingOOP.Interfaces;
 
-public class Main {
+public class Test {
 
     public static void main(String[] args) {
 
