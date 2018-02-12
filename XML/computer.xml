@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<computers>
+
+    <computer index="0">
+        <name>Lenovo</name>
+        <origin>China</origin>
+        <price>8000</price>
+
+        <type>
+            <peripheral>false</peripheral>
+            <energy>300</energy>
+            <cooler>false</cooler>
+        </type>
+
+        <critical>true</critical>
+    </computer>
+
+    <computer index="1">
+        <name>Cooler</name>
+        <origin>Ukraine</origin>
+        <price>500</price>
+
+        <type>
+            <peripheral>true</peripheral>
+            <energy>50</energy>
+            <cooler>true</cooler>
+        </type>
+
+        <critical>true</critical>
+    </computer>
+
+</computers>
