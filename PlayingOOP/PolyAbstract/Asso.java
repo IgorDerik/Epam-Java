@@ -6,4 +6,5 @@ public class Asso extends Component {
     public String getInfo() {
         return "I am Association";
     }
+
 }
