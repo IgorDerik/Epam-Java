@@ -8,32 +8,26 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        System.out.println("Welcome to our transportation system!");
-        System.out.println("We have discount for you if your name is Volodymyr! :)");
-        System.out.println();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("What is the maximum price you agree to pay?");
-        int maxPrice = Integer.parseInt( reader.readLine() );
 
-        Seaport Odessa = new Seaport("Odessa",5000);
-        Seaport Istanbul = new Seaport("Istanbul",100000);
+        System.out.println("Welcome to our transportation system!");
+        System.out.println("Currently we are working with such ports: ");
 
-        Cargo potato = new Cargo("Potato",100);
+        PortList.viewList();
 
-        Offer offer = new Offer(Odessa,Istanbul,potato,maxPrice);
+        System.out.println("Please choose and print a number of a departure port:");
+        int departurePortIndex = Integer.parseInt(reader.readLine());
 
-        offer.printDescription();
+        System.out.println("Please choose and print a number of an arrival port:");
+        int arrivalPortIndex = Integer.parseInt(reader.readLine());
 
-        /*
-        System.out.println("Enter a departure port:");
-        String portFrom = reader.readLine();
-        System.out.println("Enter an arrival port:");
-        String portTo = reader.readLine();
-        System.out.println("What is the weight of your goods?");
-        int cargoWeight = Integer.parseInt( reader.readLine() );
-        System.out.println("Looking for proposals to transport cargo from "+portFrom+" to "+portTo+"... Max price: "+maxPrice+" Weigh: "+cargoWeight);
-        */
+        Seaport departurePort = PortList.ports.get(departurePortIndex);
+        Seaport arrivalPort = PortList.ports.get(arrivalPortIndex);
 
+        System.out.println();
+        System.out.println("Departure port: "+departurePort.getCity());
+        System.out.println("Arrival port: "+arrivalPort.getCity());
+        System.out.println("Distance: "+departurePort.getLocation().getDistanceTo(arrivalPort.getLocation())+ " meters.");
     }
 
 }
