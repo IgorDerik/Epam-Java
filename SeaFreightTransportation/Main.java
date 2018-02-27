@@ -40,16 +40,41 @@ public class Main {
 
         Cargo yourCargo = new Cargo(cargoName,cargoWeight);
 
-        OfferService offerService = new OfferService(new Offer(departurePort,arrivalPort,yourCargo));
+        System.out.println("Do you want to filter offers by maximum price? Press 'y' or 'n'");
+        String filterByPrice = reader.readLine();
+
+        boolean filter = false;
+        int maxPrice=0;
+        if(filterByPrice.equals("y")) {
+            filter = true;
+            System.out.println("What is the maximum price you agree to pay?");
+            maxPrice = Integer.parseInt(reader.readLine());
+        }
+
+        Offer preOffer = new Offer(departurePort,arrivalPort,yourCargo);
+//        preOffer.setMaxFullPrice(maxPrice);
+
+        OfferService offerService = new OfferService(preOffer);
         offerService.buildOffersDependingOnShip();
 
         System.out.println();
-        System.out.println("Our offers for you:");
-        for (Offer offer : offerService.getOffers()) {
-            System.out.println("Ship: " + offer.getShip().getName());
-            System.out.println("Road time: "+ offer.getShip().getDeliverTime(distance) / 3600 +" h");
-            System.out.println("Full Price: "+ offer.getFullPrice());
-            System.out.println();
+        System.out.println("OFFERS: ");
+        for (Offer offer : offerService.getOffers()) { //to be redone
+            if (filter) {
+                if (offer.getFullPrice()<=maxPrice) {
+                    System.out.println("Ship: " + offer.getShip().getName());
+                    System.out.println("Road time: " + offer.getShip().getDeliverTime(distance) / 3600 + " h");
+                    System.out.println("Full Price: " + offer.getFullPrice());
+                    //    System.out.println("Is price acceptable: "+ offer.isPriceAcceptable());
+                    System.out.println();
+                }
+            }
+            else { //to be redone
+                System.out.println("Ship: " + offer.getShip().getName());
+                System.out.println("Road time: " + offer.getShip().getDeliverTime(distance) / 3600 + " h");
+                System.out.println("Full Price: " + offer.getFullPrice());
+                System.out.println();
+            }
         }
 
     }
