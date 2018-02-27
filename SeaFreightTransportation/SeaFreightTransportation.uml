@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>SeaFreightTransportation</OriginalElement>
+  <nodes>
+    <node x="399.0" y="124.0">SeaFreightTransportation.Ship</node>
+    <node x="201.49999999999997" y="0.0">SeaFreightTransportation.Location</node>
+    <node x="143.49999999999997" y="292.0">SeaFreightTransportation.Offer</node>
+    <node x="180.49999999999997" y="504.0">SeaFreightTransportation.OfferService</node>
+    <node x="194.99999999999997" y="124.0">SeaFreightTransportation.Seaport</node>
+    <node x="0.0" y="135.0">SeaFreightTransportation.Cargo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="SeaFreightTransportation.Seaport" target="SeaFreightTransportation.Location">
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="SeaFreightTransportation.Offer" target="SeaFreightTransportation.Seaport">
+      <point x="0.0" y="-81.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="SeaFreightTransportation.OfferService" target="SeaFreightTransportation.Offer">
+      <point x="-71.0" y="-37.0" />
+      <point x="215.99999999999997" y="479.0" />
+      <point x="191.3333333333333" y="479.0" />
+      <point x="-95.66666666666669" y="81.0" />
+    </edge>
+    <edge source="SeaFreightTransportation.Offer" target="SeaFreightTransportation.Ship">
+      <point x="95.66666666666669" y="-81.0" />
+      <point x="382.66666666666663" y="267.0" />
+      <point x="496.5" y="267.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="SeaFreightTransportation.Offer" target="SeaFreightTransportation.Cargo">
+      <point x="-95.66666666666669" y="-81.0" />
+      <point x="191.3333333333333" y="267.0" />
+      <point x="87.5" y="267.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="297.0" y="289.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
