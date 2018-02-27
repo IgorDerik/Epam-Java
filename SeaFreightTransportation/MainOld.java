@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainOld {
+public class MainOld { //please use Main.java
 
     public static void main(String[] args) throws IOException {
 
@@ -20,9 +20,9 @@ public class MainOld {
 
         Cargo potato = new Cargo("Potato",100);
 
-        Offer offer = new Offer(Odessa,Istanbul,potato,maxPrice);
+//        Offer offer = new Offer(Odessa,Istanbul,potato,maxPrice);
 
-        offer.printDescription();
+//        offer.printDescription();
 
         /*
         System.out.println("Enter a departure port:");

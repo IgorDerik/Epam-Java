@@ -8,12 +8,15 @@ public class Cargo {
     private int loadPrice;
 
     public int getLoadPrice() {
-        return weight*2;
+        return loadPrice;
     }
+
 
     public Cargo(String name, int weight) {
         this.name = name;
         this.weight = weight;
+
+        this.loadPrice = weight*2; //to redone and move this logic from constructor
     }
 
     public String getName() {
@@ -24,4 +27,12 @@ public class Cargo {
         return weight;
     }
 
+    @Override
+    public String toString() {
+        return "Cargo{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", loadPrice=" + loadPrice +
+                '}';
+    }
 }

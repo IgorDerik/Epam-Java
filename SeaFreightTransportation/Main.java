@@ -24,10 +24,34 @@ public class Main {
         Seaport departurePort = PortList.ports.get(departurePortIndex);
         Seaport arrivalPort = PortList.ports.get(arrivalPortIndex);
 
+        double distance = departurePort.getLocation().getDistanceTo(arrivalPort.getLocation());
+
         System.out.println();
         System.out.println("Departure port: "+departurePort.getCity());
         System.out.println("Arrival port: "+arrivalPort.getCity());
-        System.out.println("Distance: "+departurePort.getLocation().getDistanceTo(arrivalPort.getLocation())+ " meters.");
+        System.out.println("Distance: "+distance+ " meters.");
+
+        System.out.println();
+        System.out.println("Please enter your cargo name:");
+        String cargoName = reader.readLine();
+
+        System.out.println("Please enter a cargo weight:");
+        int cargoWeight = Integer.parseInt(reader.readLine());
+
+        Cargo yourCargo = new Cargo(cargoName,cargoWeight);
+
+        OfferService offerService = new OfferService(new Offer(departurePort,arrivalPort,yourCargo));
+        offerService.buildOffersDependingOnShip();
+
+        System.out.println();
+        System.out.println("Our offers for you:");
+        for (Offer offer : offerService.getOffers()) {
+            System.out.println("Ship: " + offer.getShip().getName());
+            System.out.println("Road time: "+ offer.getShip().getDeliverTime(distance) / 3600 +" h");
+            System.out.println("Full Price: "+ offer.getFullPrice());
+            System.out.println();
+        }
+
     }
 
 }

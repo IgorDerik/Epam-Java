@@ -5,7 +5,7 @@ public class Seaport {
     private String city;
     private String country;
 
-    private String name;
+//    private String name;
 
     private int maxWeightCanBeLoaded;
 
@@ -19,7 +19,7 @@ public class Seaport {
     }
 
     public Seaport(String name, int maxWeightCanBeLoaded) {
-        this.name = name;
+  //      this.name = name;
         this.maxWeightCanBeLoaded = maxWeightCanBeLoaded;
     }
 
@@ -29,10 +29,6 @@ public class Seaport {
 
     public void toShip(int weight) {
         maxWeightCanBeLoaded = maxWeightCanBeLoaded+weight;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public int getMaxWeightCanBeLoaded() {
@@ -56,7 +52,6 @@ public class Seaport {
         return "Seaport{" +
                 "city='" + city + '\'' +
                 ", country='" + country + '\'' +
-                ", name='" + name + '\'' +
                 ", maxWeightCanBeLoaded=" + maxWeightCanBeLoaded +
                 ", location=" + location +
                 '}';
