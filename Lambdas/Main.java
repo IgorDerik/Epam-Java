@@ -27,6 +27,16 @@ public class Main {
         employees.add(new Employee("Emilia", "London", 24, 7, Position.WORKER));
         employees.add(new Employee("Emilia", "London", 24, 7, Position.WORKER));
 
+        //testing...
+        employees.forEach(System.out::println);
+        //employees.stream().forEach(System.out::println);
+        System.out.println();
+        System.out.println();
+
+        //get first employee
+        System.out.println(Functions.getFirstEmployee(employees));
+        System.out.println();
+
         //Print the last four elements of the collection
         employees.stream().skip(employees.size()-4).forEach(System.out::println);
 
